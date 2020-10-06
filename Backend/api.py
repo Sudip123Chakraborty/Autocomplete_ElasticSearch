@@ -50,20 +50,15 @@ class Controller(Resource):
                 "bool": {
                     "must": [
                         {
-							"wildcard": {
+							"match_phrase_prefix": {
 							    "item": {
-							        "value": "{}*".format(self.query)
+							        "value": "{}*".format(self.query),
 							    }
-							}
+							},
+              "category":{
+               "value": "grocery"
+              }
 						}
-						#,
-						#{
-						#	"wildcard": {
-						#	    "category": {
-						#	        "value": "grocery"
-						#	    }
-						#	}
-						#}
                     ],
                     "filter": [],
                     "should": [],
