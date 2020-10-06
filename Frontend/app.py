@@ -21,7 +21,6 @@ def pipe():
     response = requests.request("GET", url, headers=headers, data = payload)
     return response.json()
 
-
-
+#this is a flask server
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
